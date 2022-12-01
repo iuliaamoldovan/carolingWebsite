@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Page Title</title>
+            <meta charset="utf-8">
+            <link rel="stylesheet" href="index.css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <div class="header">
+                <div class="content">
+                    <h1 class="title">vestea buna</h1>
+                    <div id="countdown"></div>
+                    <div class="link">
+                        <img src="assets/telegram.svg" class="telegram">
+                        <a href="https://t.me/+M2dM_H0mlrg1MThh">Alatura-te grupului de Telegram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="details-bar">
+                <div class="event-bar">
+                    <span class="material-icons">
+                        event
+                    </span>
+                    <h2 class="details-text">21 Decembrie 2022</h2>
+                </div>
+                <div class="line"></div>
+                <div class="event-bar">
+                    <span class="material-icons">
+                        schedule
+                    </span>
+                    <h2 class="details-text">18 PM</h2>
+                </div>
+                <div class="line"></div>
+                <div class="event-bar">
+                    <span class="material-icons">
+                        place
+                    </span>
+                    <h2 class="details-text">Primaria Aradului</h2>
+                </div>
+            </div>
+            <section class="what-section">
+                <div class="img">
+                    <img src="/assets/caroling.svg" alt="" class="img-caroling" />
+                </div>
+
+                <div class="text-container" >
+                    <h3>ce facem?</h3>
+                    <h2>Dorim sa ducem vestea buna </h2>
+                    <p>Incepand din fata primariei Aradului, pornim pe strazile Aradului cantand colinde spre slava Lui Dumnezeu</p>
+                    <div class="more-details">
+                        <div class="link">
+                            <img src="assets/telegram.svg" class="telegram">
+                            <a href="https://t.me/+M2dM_H0mlrg1MThh">mai multe detalii</a>
+                        </div>
+                    </div>
+                </div>
+     
+            </section>
+
+            <section class="why-section">
+                <div class="img">
+                    <img src="/assets/jesus.svg" alt="" class="img-caroling" />
+                </div>
+
+                <div class="text-container text-container-left" >
+                    <h3>de ce?</h3>
+                    <h2>Sa spunem despre cel mai minunat cadou</h2>
+                    <p>In aducerea aminte a celei mai importante persoane care sa născut pe Pamant, Domnul nostru Isus Hristos. Venind pe lume, El,  ne-a facut cel mai minunat cadou, speranta.</p>
+                    
+                </div>
+            </section>
+
+            <section class="who-section">
+                <div class="img">
+                    <img src="/assets/everyone.svg" alt="" class="img-caroling" />
+                </div>
+
+                <div class="text-container" >
+                    <h3>cine?</h3>
+                    <h2>Oricine e invitat sa participe la acest eveniment</h2>
+                    <p>Indiferent de varsta esti invitat si tu sa aduci vestea buna. Cheama cu tine pe prietenul tau, familia ta si nu rata aceasta ocazie de a-L lauda pe Imparat</p>
+                
+                </div>
+            </section>
+            <footer>
+                <div class="big-text">hai si tu!</div>
+            </footer>
+            <script>
+                var end = new Date('12/21/2022 6:00 PM');
+                
+                    var _second = 1000;
+                    var _minute = _second * 60;
+                    var _hour = _minute * 60;
+                    var _day = _hour * 24;
+                    var timer;
+                
+                    function showRemaining() {
+                        var now = new Date();
+                        var distance = end - now;
+                        if (distance < 0) {
+                
+                            clearInterval(timer);
+                            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+                
+                            return;
+                        }
+                        var days = Math.floor(distance / _day);
+                        var hours = Math.floor((distance % _day) / _hour);
+                        var minutes = Math.floor((distance % _hour) / _minute);
+                        var seconds = Math.floor((distance % _minute) / _second);
+                
+                        document.getElementById('countdown').innerHTML = `<div>${days}&nbsp : &nbsp<br><span class="date">zile</span></div>`;
+                        document.getElementById('countdown').innerHTML += `<div>${hours}&nbsp : &nbsp<br><span class="date">ore</span></div>`;
+                        document.getElementById('countdown').innerHTML += `<div>${minutes}&nbsp : &nbsp <br><span class="date">min</span></div>`;
+                        document.getElementById('countdown').innerHTML += `<div>${seconds} <br><span class="date">sec</span></div>`;
+                    }
+                
+                    timer = setInterval(showRemaining, 1000);
+                </script>
+        </body>
+    </html>
